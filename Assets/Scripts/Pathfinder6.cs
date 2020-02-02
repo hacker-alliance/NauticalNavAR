@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class Pathfinder0 : MonoBehaviour, ITrackableEventHandler
+public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
 {
     private TrackableBehaviour mTrackableBehaviour2;
     public GameObject arrow;
@@ -46,12 +46,31 @@ public class Pathfinder0 : MonoBehaviour, ITrackableEventHandler
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, 0, oo },
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, oo, 0 } };
 
-            int thisNode = 1;
-            int[] theseEdgeNodes = {2};
-            int[] theseEdgeAngles = {0};
+            int thisNode = 5;
+            int[] theseEdgeNodes = {6, 16};
+            int[] theseEdgeAngles = {0, 270};
             int[,] finalPaths = dijkstra(adjacencyMatrix, thisNode-1);
 
-            int destination = 3;
+            int destination = -1;
+            if (PopulateDropDown.destination == 0)
+            {
+                destination = 12;
+            } else if (PopulateDropDown.destination == 1)
+            {
+                destination = 13;
+            } else if (PopulateDropDown.destination == 2)
+            {
+                destination = 20;
+            } else if (PopulateDropDown.destination == 3)
+            {
+                destination = 21;
+            } else if (PopulateDropDown.destination == 4)
+            {
+                destination = 17;
+            } else if (PopulateDropDown.destination == 5)
+            {
+                destination = 6;
+            }
 
             int[] finalPath = new int[finalPaths.GetLength(0)];
             for (int i=0; i<finalPaths.GetLength(0); i++)

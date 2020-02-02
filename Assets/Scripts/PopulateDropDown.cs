@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class PopulateDropDown : MonoBehaviour
 {
-    public static int destination;   
+    public static int destination;
     void Start()
     {
         Dropdown drop =  gameObject.GetComponent<Dropdown>();
         int n = 6;
-        string []arr = {"men's restroom", "women's restroom", "floor 4", "floor 2", "elevators", "Aisle 1"};
+        string []arr = {"Men's Restroom", "Women's Restroom", "Floor 4", "Floor 2", "Elevators", "Bookshelf Aisle"};
 
         for (int i = 0; i < n; i++)
         {
@@ -25,7 +25,7 @@ public class PopulateDropDown : MonoBehaviour
 
     void Update()
     {
-       
+
     }
 
     void setDestination(Dropdown drop)
