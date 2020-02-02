@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4053949571611633663
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3572627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5276494
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.140724
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029556, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029560, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029563, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: mHeight
+      value: 0.144004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029563, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: mTrackableName
+      value: waterfall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029563, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: mAspectRatio
+      value: 0.666994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029563, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: mWidth
+      value: 0.2159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029566, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterfallTarget Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152363581763029567, guid: 354b417cde7e6b4468e68db8d2a716d6,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 354b417cde7e6b4468e68db8d2a716d6, type: 3}
