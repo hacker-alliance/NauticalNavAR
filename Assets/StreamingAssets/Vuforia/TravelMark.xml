@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="cruise" size="0.215900 0.141763" />
+    <ImageTarget name="thailand" size="0.215900 0.161925" />
+    <ImageTarget name="tokyo" size="0.215900 0.143933" />
+    <ImageTarget name="waterfall" size="0.215900 0.144004" />
+    <ImageTarget name="volcano" size="0.215900 0.144004" />
+  </Tracking>
+</QCARConfig>
