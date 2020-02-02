@@ -24,27 +24,27 @@ public class Pathfinder2 : MonoBehaviour, ITrackableEventHandler
             Debug.Log("Found");
 
             int NO_PARENT = -1;
-            double[,] adjacencyMatrix = {  { 0, 9.59, 0.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { 9.59, 0, oo, 0.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { 0.67, oo, 0, 9.59, 0.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, 0.67, 9.59, 0, oo, 0.67, oo, oo, oo, oo, 7.54, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, 0.67, oo, 0, 9.59, 0.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, 0.67, 9.59, 0, oo, 0.67, oo, oo, 6.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, 0.67, oo, 0, 9.59, 0.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, 0.67, 9.59, 0, oo, 0.67, 7.54, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, 0.67, oo, 0, 9.59, oo, oo, oo, oo, oo, 11.513, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, 0.67, 9.59, 0, oo, oo, oo, oo, 10.063, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, 7.54, oo, 6.67, oo, 7.54, oo, oo, 0, 6.525, 6.38, 13.398, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 6.525, 0, 2.358, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 6.38, 2.358, 0, oo, oo, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 13.398, oo, oo, 0, 6.65, oo, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, 10.063, oo, oo, oo, 6.65, 0, 6.67, oo, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, 11.513, oo, oo, oo, oo, oo, 6.67, 0, 4.06, oo, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 4.06, 0, 4.93, oo, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 4.93, 0, 5.336, oo, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 5.336, 0, 20, 20 },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, 0, oo },
-										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, oo, 0 } };
+            double[,] adjacencyMatrix = {  { 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, 0, 9.59, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, 9.59, 0, oo, oo, oo, oo, 6.67, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, 0, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, 0, oo, oo, oo, oo, oo, oo, 12.853, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, 0, oo, oo, oo, oo, 11.403, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 0, 6.525, 6.38, 13.398, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 6.525, 0, 2.358, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 6.38, 2.358, 0, oo, oo, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 13.398, oo, oo, 0, 6.65, oo, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, 11.403, oo, oo, oo, 6.65, 0, 6.67, oo, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, 12.853, oo, oo, oo, oo, oo, 6.67, 0, 4.06, oo, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 4.06, 0, 4.93, oo, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 4.93, 0, 5.336, oo, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 5.336, 0, 20, 20 },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, 0, oo },
+                    										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, oo, 0 } };
 
             int thisNode = 3;
             int[] theseEdgeNodes = {2};
