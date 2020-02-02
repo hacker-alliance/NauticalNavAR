@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
+public class Pathfinder6 : MonoBehaviour, ITrackableEventHandler
 {
     private TrackableBehaviour mTrackableBehaviour2;
     public GameObject arrow;
@@ -46,9 +46,9 @@ public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, 0, oo },
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, oo, 0 } };
 
-            int thisNode = 5;
-            int[] theseEdgeNodes = {6, 16};
-            int[] theseEdgeAngles = {0, 270};
+            int thisNode = 6;
+            int[] theseEdgeNodes = {5, 11, 15};
+            int[] theseEdgeAngles = {0, 180, 90};
             int[,] finalPaths = dijkstra(adjacencyMatrix, thisNode-1);
 
             int destination = -1;
@@ -235,44 +235,5 @@ public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
         }
 
         return finalPaths;
-    }
-
-    // A utility function to print
-    // the constructed distances
-    // array and shortest paths
-    private static void printSolution(int startVertex,
-                                    double[] distances,
-                                    int[] parents)
-    {
-        int nVertices = distances.Length;
-        Debug.Log("Vertex\t Distance\tPath");
-
-        for (int vertexIndex = 0;
-                vertexIndex < nVertices;
-                vertexIndex++)
-        {
-            if (vertexIndex != startVertex)
-            {
-                Debug.Log("\n" + startVertex + " -> " + vertexIndex + " \t\t " + distances[vertexIndex] + "\t\t");
-                printPath(vertexIndex, parents);
-            }
-        }
-    }
-
-    // Function to print shortest path
-    // from source to currentVertex
-    // using parents array
-    private static void printPath(int currentVertex,
-                                int[] parents)
-    {
-
-        // Base case : Source node has
-        // been processed
-        if (currentVertex == -1)
-        {
-            return;
-        }
-        printPath(parents[currentVertex], parents);
-        Debug.Log(currentVertex + " ");
     }
 }

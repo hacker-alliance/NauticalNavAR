@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
+public class Pathfinder17 : MonoBehaviour, ITrackableEventHandler
 {
     private TrackableBehaviour mTrackableBehaviour2;
     public GameObject arrow;
@@ -46,9 +46,9 @@ public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, 0, oo },
                     										   { oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, oo, 20, oo, 0 } };
 
-            int thisNode = 5;
-            int[] theseEdgeNodes = {6, 16};
-            int[] theseEdgeAngles = {0, 270};
+            int thisNode = 17;
+            int[] theseEdgeNodes = {16, 17, 18};
+            int[] theseEdgeAngles = {0, 270, 210};
             int[,] finalPaths = dijkstra(adjacencyMatrix, thisNode-1);
 
             int destination = -1;
