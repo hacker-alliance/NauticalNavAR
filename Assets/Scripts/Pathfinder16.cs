@@ -84,7 +84,7 @@ public class Pathfinder16 : MonoBehaviour, ITrackableEventHandler
             {
                 for (int i=0; i<finalPath.Length; i++)
                 {
-                    if (finalPath[i] == -1)
+                    if (finalPath[i] == 0)
                     {
                         nextNode = finalPath[i-2];
                         break;

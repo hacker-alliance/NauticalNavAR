@@ -76,6 +76,7 @@ public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
             for (int i=0; i<finalPaths.GetLength(0); i++)
             {
                 finalPath[i] = finalPaths[destination-1, i];
+                Debug.Log("KLJFJLDKFJD: " + finalPath[i]);
             }
 
             int nextNode = -1;
@@ -84,7 +85,7 @@ public class Pathfinder5 : MonoBehaviour, ITrackableEventHandler
             {
                 for (int i=0; i<finalPath.Length; i++)
                 {
-                    if (finalPath[i] == -1)
+                    if (finalPath[i] == 0)
                     {
                         nextNode = finalPath[i-2];
                         break;
